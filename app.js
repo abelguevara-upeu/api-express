@@ -10,19 +10,19 @@ app.use(express.json());
 
 const PORT_HTTP = 53761;
 app.use(cors(
-    {
-        //origin: 'http://localhost:56632'
-        origin: function (origin, callback) {
-            const ACCEPTED_ORIGINS = [
-                `http://localhost:${PORT_HTTP}`,
-            ];
-            if (ACCEPTED_ORIGINS.includes(origin)) {
-                callback(null, true);
-            } else {
-                callback(new Error('Not allowed by CORS'));
-            }
-        }
-    }
+    // {
+    //     //origin: 'http://localhost:56632'
+    //     origin: function (origin, callback) {
+    //         const ACCEPTED_ORIGINS = [
+    //             `http://localhost:${PORT_HTTP}`,
+    //         ];
+    //         if (ACCEPTED_ORIGINS.includes(origin)) {
+    //             callback(null, true);
+    //         } else {
+    //             callback(new Error('Not allowed by CORS'));
+    //         }
+    //     }
+    // }
 ));
 app.disable('x-powered-by');
 
